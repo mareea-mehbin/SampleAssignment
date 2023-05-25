@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample Assignment 1</title>
+  </head>
+
+  <body>
+    <label for="first-name" class="input-label">Enter your First Name: </label>
+    <input type="text" id="first-name" name="first-name" />
+
+    <br />
+    <label for="last-name" class="input-label">Enter your Last Name: </label>
+    <input type="text" id="last-name" name="last-name" />
+
+    <br />
+    <button id="submitButton" class="submit-button" onclick="submitFunction()">
+      Submit
+    </button>
+  </body>
+
+  <style>
+    body {
+      background-color: black;
+    }
+
+    .input-label {
+      color: white;
+    }
+
+    .submit-button {
+      border-radius: 3px;
+      background-color: white;
+      color: black;
+    }
+  </style>
+
+  <script>
+    var firstName, lastName;
+
+    function submitFunction() {
+      firstName = document.getElementsById("first-name").value;
+      lastName = document.getElementsById("last-name").value;
+      console.log(firstName, lastName);
+      alert("Full Name: " + firstName + " " + lastName);
+    }
+  </script>
+</html>
